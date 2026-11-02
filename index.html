@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alianza Estratégica: SIKAI Consulting & Seedary Colombia</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#1a88ff',
+              secondary: '#007bff',
+              accent: '#26d8c4',
+              neon: '#39ff14',
+              dark: '#121418',
+              card: '#181b22',
+              cardBorder: '#262a36',
+              textMuted: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0d0f12;
+      color: #f8fafc;
+      overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .slide {
+      display: none;
+      min-height: 100vh;
+      opacity: 0;
+      transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+      transform: translateY(10px);
+    }
+    .slide.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .glass-card {
+      background: rgba(24, 27, 34, 0.75);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(38, 216, 196, 0.35);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #1a88ff 0%, #26d8c4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glow-btn {
+      box-shadow: 0 0 25px rgba(26, 136, 255, 0.35);
+    }
+    .glow-btn:hover {
+      box-shadow: 0 0 35px rgba(38, 216, 196, 0.55);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0d0f12; }
+    ::-webkit-scrollbar-thumb { background: #262a36; border-radius: 3px; }
+  </style>
+</head>
+<body class="selection:bg-brand-primary selection:text-white">
+
+  <!-- Top Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between border-b border-white/5 bg-[#0d0f12]/80 backdrop-blur-md">
+    <div class="flex items-center space-x-3">
+      <div class="h-9 px-3 rounded-lg bg-gradient-to-r from-brand-primary to-brand-accent flex items-center justify-center font-heading font-bold text-white text-sm tracking-wider shadow-lg">
+        SIKAI
+      </div>
+      <span class="text-xs uppercase tracking-widest text-brand-textMuted font-semibold hidden sm:inline">Consulting & Growth</span>
+      <span class="text-white/20 hidden sm:inline">|</span>
+      <span class="text-xs font-semibold text-brand-accent flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-accent animate-ping"></span>
+        Alianza Seedary Colombia
+      </span>
+    </div>
+
+    <!-- Slide indicator & Controls -->
+    <div class="flex items-center space-x-3 sm:space-x-4">
+      <div class="text-xs text-brand-textMuted font-medium">
+        Slide <span id="currentSlideNum" class="text-white font-bold text-sm">1</span> de <span id="totalSlidesNum">9</span>
+      </div>
+      <div class="flex items-center bg-brand-card rounded-lg p-1 border border-brand-cardBorder">
+        <button onclick="prevSlide()" class="p-1.5 hover:bg-white/10 rounded-md transition text-slate-300 hover:text-white" title="Anterior (Flecha Izquierda)">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+        </button>
+        <button onclick="nextSlide()" class="p-1.5 hover:bg-white/10 rounded-md transition text-slate-300 hover:text-white" title="Siguiente (Flecha Derecha / Espacio)">
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+      <button onclick="toggleFullScreen()" class="hidden md:flex p-2 bg-white/5 hover:bg-white/10 rounded-lg text-slate-300 hover:text-white transition" title="Pantalla Completa (F)">
+        <i data-lucide="maximize" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Slide Container -->
+  <main class="w-full">
+
+    <!-- SLIDE 1: PORTADA -->
+    <section class="slide active flex-col justify-center items-center px-6 pt-24 pb-12 relative overflow-hidden" id="slide-1">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
+      
+      <div class="max-w-5xl w-full text-center my-auto space-y-6 relative z-10">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/30 text-brand-accent text-xs font-semibold tracking-wide uppercase">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          Alianza Estratégica de Crecimiento & Contenido
+        </div>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight leading-tight">
+          De Importadores a <br>
+          <span class="gradient-text">Líderes Indiscutibles</span> del Mercado Tech
+        </h1>
+
+        <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
+          Una máquina comercial bicanal: <span class="text-white font-semibold">Producción Cinematográfica</span> + <span class="text-white font-semibold">Creator Marketing (@maykolsicard)</span> + <span class="text-brand-accent font-semibold">Meta & TikTok Ads</span> orientada 100% a ventas en caja.
+        </p>
+
+        <!-- Presenter badges -->
+        <div class="pt-8 flex flex-wrap justify-center items-center gap-6">
+          <div class="flex items-center gap-3 bg-brand-card/90 px-5 py-3 rounded-2xl border border-brand-cardBorder text-left">
+            <div class="w-10 h-10 rounded-xl bg-brand-primary/20 flex items-center justify-center text-brand-primary font-bold">
+              SC
+            </div>
+            <div>
+              <p class="text-xs text-brand-textMuted uppercase font-bold tracking-wider">Presenta</p>
+              <p class="text-sm font-bold text-white">SIKAI Consulting</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-brand-card/90 px-5 py-3 rounded-2xl border border-brand-cardBorder text-left">
+            <div class="w-10 h-10 rounded-xl bg-brand-accent/20 flex items-center justify-center text-brand-accent font-bold">
+              MS
+            </div>
+            <div>
+              <p class="text-xs text-brand-textMuted uppercase font-bold tracking-wider">Liderado por</p>
+              <p class="text-sm font-bold text-white">Maykol Sicard (@maykolsicard)</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 bg-brand-card/90 px-5 py-3 rounded-2xl border border-brand-cardBorder text-left">
+            <div class="w-10 h-10 rounded-xl bg-brand-neon/20 flex items-center justify-center text-brand-neon font-bold">
+              SC
+            </div>
+            <div>
+              <p class="text-xs text-brand-textMuted uppercase font-bold tracking-wider">Preparado para</p>
+              <p class="text-sm font-bold text-white">Seedary Colombia S.A.S.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-8">
+          <button onclick="nextSlide()" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white font-bold text-sm glow-btn hover:opacity-95 transition inline-flex items-center gap-2 cursor-pointer">
+            Comenzar Presentación <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: VALIDACIÓN & EMPATÍA -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-2">
+      <div class="max-w-4xl w-full my-auto space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-accent text-xs uppercase tracking-widest font-bold">Transparencia Total</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold">Entendemos su Escepticismo</h2>
+          <p class="text-brand-textMuted text-sm md:text-base">El mercado de agencias en Colombia ha defraudado la confianza de los importadores serios.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass-card p-6 rounded-2xl space-y-4 border-red-500/20">
+            <div class="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400">
+              <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white">La Triste Realidad de las "Agencias"</h3>
+            <ul class="space-y-3 text-xs md:text-sm text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="x" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+                <span>Cobran \$5.000.000 a \$8.000.000 fijos por adelantado solo por entregar "paquetes de piezas".</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="x" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+                <span>Cero comprensión técnica de las Bambu Lab ni de los protocolos ZKTeco.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="x" class="w-4 h-4 text-red-400 shrink-0 mt-0.5"></i>
+                <span>Si no se vende una sola máquina en el mes, ellos cobran igual y se lavan las manos.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl space-y-4 border-brand-accent/30 bg-gradient-to-br from-brand-card via-brand-card to-brand-primary/10">
+            <div class="w-10 h-10 rounded-xl bg-brand-accent/10 border border-brand-accent/30 flex items-center justify-center text-brand-accent">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-heading font-bold text-lg text-white">Nuestra Filosofía SIKAI</h3>
+            <ul class="space-y-3 text-xs md:text-sm text-slate-300">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0 mt-0.5"></i>
+                <span><strong>Skin in the game:</strong> Base reducida de operación y ganamos con comisión por venta.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0 mt-0.5"></i>
+                <span><strong>Control total de pauta:</strong> Ustedes manejan su propio Business Manager; nadie toca su dinero publicitario.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-brand-accent shrink-0 mt-0.5"></i>
+                <span><strong>Respaldo de Creator:</strong> Maykol Sicard pone su rostro y audiencia como aval técnico en Colombia.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-xs text-brand-textMuted italic">
+            "Si ustedes no venden impresoras o cámaras, nosotros no queremos cobrar un sueldo inflado. Somos aliados comerciales, no proveedores de video."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: DIAGNÓSTICO DIGITAL DE SEEDARY -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-3">
+      <div class="max-w-5xl w-full my-auto space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-accent text-xs uppercase tracking-widest font-bold">Auditoría Real</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold">Diagnóstico Digital Seedary</h2>
+          <p class="text-brand-textMuted text-sm md:text-base">El producto es extraordinario, pero el escaparate digital está dejando millones sobre la mesa.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>Instagram @seedarycol</span>
+              <span class="text-amber-400 font-bold">Oportunidad #1</span>
+            </div>
+            <h4 class="font-bold text-white text-base">Fotos Estáticas de Cajas</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Las publicaciones actuales muestran cajas cerradas o tomas de celular con baja iluminación. En impresión 3D, el cliente compra con los ojos: necesita ver la velocidad de 500 mm/s, el AMS de 4 colores y los acabados en piezas terminadas.
+            </p>
+            <div class="pt-2 text-[11px] text-brand-accent font-semibold flex items-center gap-1">
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> Solución: Macro tomas cinemáticas y comparativas
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>TikTok Ads & Orgánico</span>
+              <span class="text-red-400 font-bold">Oportunidad #2</span>
+            </div>
+            <h4 class="font-bold text-white text-base">Inexistencia en TikTok</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              TikTok es la plataforma #1 de descubrimiento y viralidad 3D en Latinoamérica. No tener presencia activa ni campañas de Spark Ads significa regalarle el 60% de los compradores jóvenes y makers a la competencia.
+            </p>
+            <div class="pt-2 text-[11px] text-brand-neon font-semibold flex items-center gap-1">
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> Solución: Spark Ads nativos con Maykol Sicard
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl space-y-3">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>Funnel Comercial</span>
+              <span class="text-brand-primary font-bold">Oportunidad #3</span>
+            </div>
+            <h4 class="font-bold text-white text-base">Fricción al WhatsApp</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Los prospectos interesados que llegan a la web o al Instagram se pierden porque no hay un flujo directo con oferta irresistible ni incentivos con código promocional para cerrar la venta inmediatamente por WhatsApp.
+            </p>
+            <div class="pt-2 text-[11px] text-blue-400 font-semibold flex items-center gap-1">
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> Solución: Funnel WhatsApp con bobina de regalo
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-card/60 border border-white/5 p-4 rounded-xl text-center text-xs text-slate-300 max-w-2xl mx-auto">
+          💡 <strong>El dolor del comprador colombiano:</strong> No es si la Bambu Lab es buena (ya saben que es la mejor). El dolor es: <em>"¿Seedary sí me responderá por la garantía en Bogotá o Medellín?"</em>. Nuestros videos resuelven exactamente eso.
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: ECOSISTEMA COMERCIAL 4 EN 1 -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-4">
+      <div class="max-w-5xl w-full my-auto space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-accent text-xs uppercase tracking-widest font-bold">Solución Integral</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold">El Ecosistema Comercial SIKAI</h2>
+          <p class="text-brand-textMuted text-sm md:text-base">No somos un editor de video: somos su departamento audiovisual, de tráfico y autoridad comercial.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:border-brand-primary transition">
+            <div class="text-2xl font-heading font-extrabold text-brand-primary">01</div>
+            <h3 class="font-bold text-white text-base">Producción Broadcast</h3>
+            <p class="text-xs text-slate-300">
+              Videos Full HD para @seedarycol con motion graphics, locución profesional, ganchos de 3 segundos y formato estudio/laboratorio.
+            </p>
+            <div class="text-[11px] text-brand-textMuted pt-2">Reels • TikTok • Shorts</div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:border-brand-accent transition">
+            <div class="text-2xl font-heading font-extrabold text-brand-accent">02</div>
+            <h3 class="font-bold text-white text-base">Creator @maykolsicard</h3>
+            <p class="text-xs text-slate-300">
+              Maykol Sicard como embajador técnico. Collab posts, reviews y menciones en podcast con audiencia de negocios, IA y tecnología.
+            </p>
+            <div class="text-[11px] text-brand-textMuted pt-2">Confianza • Cara Visible • B2B</div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:border-brand-neon transition">
+            <div class="text-2xl font-heading font-extrabold text-brand-neon">03</div>
+            <h3 class="font-bold text-white text-base">Meta & TikTok Ads</h3>
+            <p class="text-xs text-slate-300">
+              Campañas de prospección y retargeting agresivo. Spark Ads en TikTok y anuncios en Instagram enviando clientes directos a WhatsApp.
+            </p>
+            <div class="text-[11px] text-brand-textMuted pt-2">Flujo Predecible de Compradores</div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl space-y-3 relative group hover:border-blue-400 transition">
+            <div class="text-2xl font-heading font-extrabold text-blue-400">04</div>
+            <h3 class="font-bold text-white text-base">Conversión en Caja</h3>
+            <p class="text-xs text-slate-300">
+              Códigos rastreados (`MAYKOL-SEEDARY`) con incentivos de filamento gratis para el comprador. Medición exacta de ventas y ROI.
+            </p>
+            <div class="text-[11px] text-brand-textMuted pt-2">Atribución Transparente</div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-xs text-slate-400">
+            Todo diseñado para que el equipo comercial de Seedary solo se dedique a <strong class="text-white">cerrar compras calientes en WhatsApp</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: ESTRATEGIA DE PAUTA BICANAL -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-5">
+      <div class="max-w-5xl w-full my-auto space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-neon text-xs uppercase tracking-widest font-bold">Motor de Adquisición</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold">Estrategia de Pauta Bicanal</h2>
+          <p class="text-brand-textMuted text-sm md:text-base">Cómo convertimos vistas de video en transferencias bancarias y compras en su local.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="glass-card p-7 rounded-2xl space-y-4 border-blue-500/20">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3 font-bold text-blue-400">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+                <span>Meta Ads (Instagram & Facebook)</span>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded bg-blue-500/10 text-blue-300 font-semibold">Alta Intención</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Segmentación dirigida a: Ingenieros, arquitectos, dueños de talleres, makers, integradores de seguridad y entusiastas de tecnología en Colombia.
+            </p>
+            <div class="bg-black/30 p-3.5 rounded-xl border border-white/5 space-y-2 text-xs">
+              <div class="flex justify-between text-slate-400"><span>Objetivo:</span> <span class="text-white font-medium">Leads directos a WhatsApp Business</span></div>
+              <div class="flex justify-between text-slate-400"><span>Tipo de Anuncio:</span> <span class="text-white font-medium">Reel Demostrativo + Oferta Garantía Local</span></div>
+              <div class="flex justify-between text-slate-400"><span>Costo por Lead estimado:</span> <span class="text-brand-accent font-medium">$4.500 - $8.500 COP</span></div>
+            </div>
+          </div>
+
+          <div class="glass-card p-7 rounded-2xl space-y-4 border-cyan-500/20">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3 font-bold text-brand-accent">
+                <i data-lucide="trending-up" class="w-5 h-5"></i>
+                <span>TikTok Ads (Spark Ads & Discovery)</span>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded bg-cyan-500/10 text-cyan-300 font-semibold">Costo Ultra-Bajo</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              <strong>Spark Ads:</strong> Impulsamos los videos orgánicos de Maykol Sicard y Seedary con pauta para que se sientan 100% nativos (no parecen publicidad intrusiva).
+            </p>
+            <div class="bg-black/30 p-3.5 rounded-xl border border-white/5 space-y-2 text-xs">
+              <div class="flex justify-between text-slate-400"><span>Ventaja Clave:</span> <span class="text-white font-medium">CPM 40% más barato que Meta en Colombia</span></div>
+              <div class="flex justify-between text-slate-400"><span>Audiencia:</span> <span class="text-white font-medium">Emprendedores y creadores con poder de compra</span></div>
+              <div class="flex justify-between text-slate-400"><span>Efecto:</span> <span class="text-brand-neon font-medium">Viralidad masiva + Tráfico de impulso</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border-white/10 bg-gradient-to-r from-brand-primary/10 via-brand-card to-brand-accent/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-1 text-left">
+            <h4 class="text-base font-bold text-white flex items-center gap-2">
+              <i data-lucide="lock" class="w-4 h-4 text-brand-accent"></i>
+              Presupuesto de Pauta Transparente (Directo a Plataformas)
+            </h4>
+            <p class="text-xs text-brand-textMuted max-w-xl">
+              Seedary inscribe su tarjeta corporativa en su propio Business Manager. <strong>Nosotros no tocamos su dinero de anuncios.</strong> Ustedes controlan el gasto diario en tiempo real.
+            </p>
+          </div>
+          <div class="text-right shrink-0">
+            <span class="text-xs text-brand-textMuted uppercase block">Inversión Sugerida Inicial</span>
+            <span class="text-xl font-heading font-extrabold text-brand-accent">$1.000.000 - $1.500.000 COP</span>
+            <span class="text-[11px] text-slate-400 block">(Dividido entre Meta & TikTok)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: EFECTO DEMOSTRACIÓN (REPRODUCTORES DE VIDEO ACTIVOS) -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-6">
+      <div class="max-w-6xl w-full my-auto space-y-6">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-accent text-xs uppercase tracking-widest font-bold">Muestra Real Interactiva</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold">Efecto Demostración</h2>
+          <p class="text-brand-textMuted text-sm md:text-base">No vinimos a prometer lo que "podríamos hacer". Miren lo que ya produjimos con sus equipos.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 items-start">
+          
+          <!-- Video Card 1: Spot Lab Studio (Vertical 9:16) -->
+          <div class="glass-card p-5 rounded-3xl space-y-3.5 border-brand-accent/30 shadow-2xl flex flex-col justify-between group">
+            <div>
+              <div class="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-white/10 shadow-inner">
+                <video 
+                  id="vid-spot"
+                  class="w-full h-full object-cover"
+                  poster="posters/poster_spot_lab.jpg"
+                  preload="metadata"
+                  playsinline
+                  controls
+                >
+                  <source src="videos/spot_lab_studio.mp4" type="video/mp4">
+                  Tu navegador no soporta el video.
+                </video>
+              </div>
+
+              <div class="pt-3 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-neon/15 text-brand-neon border border-brand-neon/30 uppercase">
+                    Nuevo Spot • 25s
+                  </span>
+                  <span class="text-[11px] text-slate-400 font-mono">1080x1920 (9:16)</span>
+                </div>
+                <h3 class="font-bold text-white text-base">Spot Lab Studio: Laboratorio I+D</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Escenografía técnica limpia de alta ingeniería con AMS Lite, velocidad a 500 mm/s y audio dinámico. Cero piso de baldosas ni entornos caseros.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-[11px] text-brand-accent font-semibold">✨ Dual-Unsharp 1080p</span>
+              <button 
+                onclick="openCinema('videos/spot_lab_studio.mp4', 'Spot Lab Studio: Laboratorio I+D', 'Escenografía técnica limpia con AMS Lite y velocidad 500 mm/s', 'SPOT PUBLICITARIO')"
+                class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-xs text-white flex items-center gap-1.5 transition"
+              >
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Modo Cine
+              </button>
+            </div>
+          </div>
+
+          <!-- Video Card 2: Promo Reel Dinámico (Vertical 9:16) -->
+          <div class="glass-card p-5 rounded-3xl space-y-3.5 border-brand-primary/30 shadow-2xl flex flex-col justify-between group">
+            <div>
+              <div class="relative aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-white/10 shadow-inner">
+                <video 
+                  id="vid-reel"
+                  class="w-full h-full object-cover"
+                  poster="posters/poster_promo_reel.jpg"
+                  preload="metadata"
+                  playsinline
+                  controls
+                >
+                  <source src="videos/promo_reel.mp4" type="video/mp4">
+                  Tu navegador no soporta el video.
+                </video>
+              </div>
+
+              <div class="pt-3 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-brand-primary/20 text-brand-primary border border-brand-primary/30 uppercase">
+                    Promo Reel • 34s
+                  </span>
+                  <span class="text-[11px] text-slate-400 font-mono">1080x1920 (9:16)</span>
+                </div>
+                <h3 class="font-bold text-white text-base">Reel Comercial: Bambu Lab A1</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Montaje enérgico con locución comercial fluida de Alonso ("SAC"), motion graphics tipográficos Bahnschrift y transiciones whip dinámicas.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-[11px] text-brand-primary font-semibold">🎙️ Voz -14 LUFS Broadcast</span>
+              <button 
+                onclick="openCinema('videos/promo_reel.mp4', 'Reel Comercial: Bambu Lab A1 Combo', 'Montaje enérgico con locución comercial fluida de Alonso y motion graphics', 'REEL COMERCIAL')"
+                class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-xs text-white flex items-center gap-1.5 transition"
+              >
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Modo Cine
+              </button>
+            </div>
+          </div>
+
+          <!-- Video Card 3: Master Largo Documental (Horizontal 16:9) -->
+          <div class="glass-card p-5 rounded-3xl space-y-3.5 border-white/20 shadow-2xl flex flex-col justify-between group">
+            <div>
+              <div class="relative aspect-video bg-black rounded-2xl overflow-hidden border border-white/10 shadow-inner">
+                <video 
+                  id="vid-master"
+                  class="w-full h-full object-cover"
+                  poster="posters/poster_documental.jpg"
+                  preload="metadata"
+                  playsinline
+                  controls
+                >
+                  <source src="videos/documental_master.mp4" type="video/mp4">
+                  Tu navegador no soporta el video.
+                </video>
+              </div>
+
+              <div class="pt-3 space-y-1">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-white/20 text-white border border-white/30 uppercase">
+                    Master YouTube • 1m 36s
+                  </span>
+                  <span class="text-[11px] text-slate-400 font-mono">1920x1080 (16:9)</span>
+                </div>
+                <h3 class="font-bold text-white text-base">Master Largo: Desglose de Ingeniería</h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Desglose técnico de 10 capítulos: knolling, montaje de pantalla, cableado estructurado y calibración. Formato perfecto para YouTube y clientes corporativos B2B.
+                </p>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-center justify-between border-t border-white/5">
+              <span class="text-[11px] text-slate-300 font-semibold">🏢 Formato Corporativo B2B</span>
+              <button 
+                onclick="openCinema('videos/documental_master.mp4', 'Master Largo: Desglose de Ingeniería', 'Documental técnico completo con estructura de 10 capítulos y calibración', 'DOCUMENTAL TÉCNICO')"
+                class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-xs text-white flex items-center gap-1.5 transition"
+              >
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Modo Cine
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center pt-2">
+          <p class="text-sm text-slate-200">
+            ¿Cómo se vería el catálogo de Seedary si <strong class="text-brand-accent">cada lanzamiento</strong> tuviera piezas con este estándar?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: MODELOS DE COBRO HÍBRIDOS (BASE + COMISIÓN) -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-7">
+      <div class="max-w-5xl w-full my-auto space-y-6">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-accent text-xs uppercase tracking-widest font-bold">Inversión Inteligente</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold">Estructura Comercial Híbrida</h2>
+          <p class="text-brand-textMuted text-sm md:text-base">Alineados al 100%: cobramos una base operativa mínima y ganamos cuando Seedary factura.</p>
+        </div>
+
+        <!-- Callout explicativo de Comisión Unificada sobre TODO el contenido producido -->
+        <div class="glass-card p-4 rounded-2xl border-brand-accent/30 bg-gradient-to-r from-brand-accent/15 via-black/50 to-brand-primary/15 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <div class="flex items-center gap-3 text-white">
+            <div class="w-8 h-8 rounded-xl bg-brand-neon/20 border border-brand-neon/40 flex items-center justify-center shrink-0">
+              <i data-lucide="check-check" class="w-4 h-4 text-brand-neon"></i>
+            </div>
+            <div>
+              <strong class="text-brand-neon font-bold text-sm block">Comisión Unificada sobre Todo el Ecosistema Audiovisual</strong>
+              <span class="text-slate-300">La comisión aplica a las ventas generadas por <strong>todos los videos creados por SIKAI</strong>: publicados en <strong>@seedarycol</strong>, en <strong>@maykolsicard</strong> o distribuidos como anuncios en <strong>Meta Ads y TikTok Ads</strong>.</span>
+            </div>
+          </div>
+          <span class="text-[11px] px-3 py-1.5 rounded-full bg-white/10 text-brand-accent font-bold whitespace-nowrap border border-brand-accent/30">Skin in the Game Total</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Opción A -->
+          <div class="glass-card p-7 rounded-3xl border-brand-accent/40 bg-brand-card/90 space-y-5 relative shadow-2xl">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-brand-accent/10 text-brand-accent border border-brand-accent/30 uppercase tracking-wider">
+                Opción A: Partnership por Resultados
+              </span>
+              <span class="text-xs text-brand-textMuted">Riesgo Mínimo</span>
+            </div>
+
+            <div class="space-y-1">
+              <div class="text-xs text-brand-textMuted">Base Operativa Mensual (Cubrimiento de producción y setup de pauta)</div>
+              <div class="text-3xl md:text-4xl font-heading font-extrabold text-white">$1.800.000 <span class="text-sm font-normal text-slate-400">COP/mes</span></div>
+            </div>
+
+            <div class="bg-black/40 p-4 rounded-2xl border border-brand-accent/20 space-y-2.5">
+              <div class="text-xs font-bold text-brand-accent uppercase tracking-wider flex items-center gap-1.5">
+                <i data-lucide="percent" class="w-3.5 h-3.5"></i> Comisión por Venta Atribuida (Todo Canal)
+              </div>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex justify-between border-b border-white/5 pb-1"><span>Bambu Lab A1 Combo / P1S / X1:</span> <strong class="text-white">$120.000 COP</strong></li>
+                <li class="flex justify-between border-b border-white/5 pb-1"><span>Bambu Lab A1 Mini:</span> <strong class="text-white">$80.000 COP</strong></li>
+                <li class="flex justify-between"><span>Combos de Cámaras / ZKTeco:</span> <strong class="text-white">7% del valor neto</strong></li>
+              </ul>
+            </div>
+
+            <div class="space-y-2 text-xs text-slate-300">
+              <p class="font-bold text-white flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-accent"></i> 8 Videos al mes (4 en @seedarycol + 4 en @maykolsicard)</p>
+              <p class="font-bold text-white flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-accent"></i> Montaje y optimización de Pauta en Meta & TikTok Ads</p>
+              <p class="font-bold text-white flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-accent"></i> Enlace WhatsApp predeterminado + Código `MAYKOL-SEEDARY`</p>
+            </div>
+          </div>
+
+          <!-- Opción B -->
+          <div class="glass-card p-7 rounded-3xl border-brand-primary/40 bg-brand-card/90 space-y-5 relative shadow-2xl">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold px-3 py-1 rounded-full bg-brand-primary/10 text-brand-primary border border-brand-primary/30 uppercase tracking-wider">
+                Opción B: Crecimiento Acelerado
+              </span>
+              <span class="text-xs text-brand-accent font-bold">⭐ Recomendada</span>
+            </div>
+
+            <div class="space-y-1">
+              <div class="text-xs text-brand-textMuted">Base Operativa Mensual (Mayor volumen, pauta activa y YouTube)</div>
+              <div class="text-3xl md:text-4xl font-heading font-extrabold text-white">$2.800.000 <span class="text-sm font-normal text-slate-400">COP/mes</span></div>
+            </div>
+
+            <div class="bg-black/40 p-4 rounded-2xl border border-brand-primary/20 space-y-2.5">
+              <div class="text-xs font-bold text-brand-primary uppercase tracking-wider flex items-center gap-1.5">
+                <i data-lucide="percent" class="w-3.5 h-3.5"></i> Comisión por Venta Atribuida (Todo Canal)
+              </div>
+              <ul class="text-xs text-slate-300 space-y-2">
+                <li class="flex justify-between border-b border-white/5 pb-1"><span>Bambu Lab A1 Combo / P1S / X1:</span> <strong class="text-white">$100.000 COP</strong></li>
+                <li class="flex justify-between border-b border-white/5 pb-1"><span>Bambu Lab A1 Mini:</span> <strong class="text-white">$60.000 COP</strong></li>
+                <li class="flex justify-between"><span>Combos de Cámaras / ZKTeco:</span> <strong class="text-white">5% del valor neto</strong></li>
+              </ul>
+            </div>
+
+            <div class="space-y-2 text-xs text-slate-300">
+              <p class="font-bold text-white flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-primary"></i> 14 Videos Cortos al mes (Multi-canal diario)</p>
+              <p class="font-bold text-white flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-primary"></i> 1 Video Largo YouTube (Review técnica definitiva)</p>
+              <p class="font-bold text-white flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-brand-primary"></i> Pruebas A/B creativas de anuncios en Meta & TikTok</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-card/50 border border-white/10 p-4 rounded-xl text-center text-xs text-slate-300 flex flex-col md:flex-row items-center justify-between gap-3">
+          <div class="text-left">
+            <span class="text-brand-accent font-bold">💼 ¿Por qué este modelo elimina el riesgo de Seedary?</span>
+            <p class="text-[11px] text-slate-400">Una agencia cobra $6M-$8M COP fijos sin importar si venden o no. Nosotros cobramos una base reducida para costos técnicos y apostamos nuestro beneficio a que ustedes vendan.</p>
+          </div>
+          <div class="text-right shrink-0">
+            <span class="text-[11px] text-slate-400 block">Opción de canje flexible:</span>
+            <strong class="text-white text-xs">$1.9M efectivo + $900K filamentos/insumos</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: CALCULADORA INTERACTIVA DE RETORNO (ROI) -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-8">
+      <div class="max-w-4xl w-full my-auto space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="text-brand-neon text-xs uppercase tracking-widest font-bold">Simulación en Vivo</span>
+          <h2 class="text-3xl md:text-5xl font-heading font-bold">Calculadora de ROI</h2>
+          <p class="text-brand-textMuted text-sm md:text-base">Miren lo rápido que se amortiza la alianza con solo un puñado de impresoras vendidas.</p>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl space-y-6">
+          <div class="space-y-3">
+            <div class="flex justify-between items-center text-sm">
+              <label class="text-slate-300 font-semibold">Impresoras Bambu Lab adicionales vendidas al mes:</label>
+              <span id="sliderValue" class="text-2xl font-heading font-extrabold text-brand-accent">10 unidades</span>
+            </div>
+            <input type="range" id="printerSlider" min="2" max="30" value="10" step="1" class="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-brand-accent" oninput="calculateROI()">
+            <div class="flex justify-between text-[11px] text-brand-textMuted">
+              <span>2 máquinas (Breakeven)</span>
+              <span>15 máquinas (Moderado)</span>
+              <span>30 máquinas (Objetivo Escala)</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-white/10 text-center">
+            <div class="bg-black/30 p-4 rounded-2xl border border-white/5">
+              <span class="text-[11px] text-brand-textMuted block uppercase">Facturación Bruta Generada</span>
+              <span id="grossRevenue" class="text-xl md:text-2xl font-heading font-bold text-white">$32.000.000</span>
+              <span class="text-[10px] text-slate-500 block">Ticket prom. $3.2M</span>
+            </div>
+
+            <div class="bg-black/30 p-4 rounded-2xl border border-white/5">
+              <span class="text-[11px] text-brand-textMuted block uppercase">Margen Bruto Seedary (~25%)</span>
+              <span id="grossProfit" class="text-xl md:text-2xl font-heading font-bold text-brand-neon">$8.000.000</span>
+              <span class="text-[10px] text-slate-500 block">Ganancia de producto</span>
+            </div>
+
+            <div class="bg-black/30 p-4 rounded-2xl border border-white/5">
+              <span class="text-[11px] text-brand-textMuted block uppercase">Costo Alianza (Base + Com.)</span>
+              <span id="sikaiCost" class="text-xl md:text-2xl font-heading font-bold text-amber-400">$3.000.000</span>
+              <span class="text-[10px] text-slate-500 block">Plan A + Comisiones</span>
+            </div>
+
+            <div class="bg-brand-primary/10 p-4 rounded-2xl border border-brand-primary/30">
+              <span class="text-[11px] text-brand-accent block uppercase font-bold">Utilidad Neta Extra</span>
+              <span id="netProfit" class="text-xl md:text-2xl font-heading font-extrabold text-brand-accent">+$5.000.000</span>
+              <span id="roasMultiple" class="text-[10px] text-white/80 block font-bold">Retorno 2.6x</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-xs text-slate-300">
+          📌 <strong>Punto de equilibrio:</strong> Con tan solo <span class="text-brand-neon font-bold">2 a 3 impresoras vendidas al mes</span>, la alianza completa y la pauta quedan 100% pagadas. A partir de la máquina 4, es ganancia pura.
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: CIERRE Y ACUERDO PILOTO (60 DÍAS) -->
+    <section class="slide flex-col justify-center items-center px-6 pt-24 pb-12" id="slide-9">
+      <div class="max-w-4xl w-full my-auto text-center space-y-8">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-neon/10 border border-brand-neon/30 text-brand-neon text-xs font-semibold tracking-wide uppercase">
+          <i data-lucide="handshake" class="w-3.5 h-3.5"></i>
+          Garantía de Compromiso Mutuo
+        </div>
+
+        <h2 class="text-4xl md:text-6xl font-heading font-extrabold">
+          Acuerdo Piloto de <span class="gradient-text">60 Días</span>
+        </h2>
+
+        <p class="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          No les pedimos un contrato anual a ciegas. Iniciemos con un periodo de prueba de 2 meses: medimos prospectos a WhatsApp, ventas atribuidas y rotación de stock.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-5 text-left max-w-3xl mx-auto">
+          <div class="glass-card p-5 rounded-2xl space-y-2 border-brand-accent/20">
+            <div class="text-brand-accent font-bold text-xs uppercase">Día 1 al 10</div>
+            <h4 class="text-sm font-bold text-white">Despegue & Setup</h4>
+            <p class="text-xs text-slate-400">Entrega del primer lote de videos para Seedary y @maykolsicard. Configuración de cuentas de Meta y TikTok Ads.</p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl space-y-2 border-brand-primary/20">
+            <div class="text-brand-primary font-bold text-xs uppercase">Día 11 al 30</div>
+            <h4 class="text-sm font-bold text-white">Tráfico & Validación</h4>
+            <p class="text-xs text-slate-400">Activación de pauta, generación de prospectos a WhatsApp y primeras ventas con el código `MAYKOL-SEEDARY`.</p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl space-y-2 border-brand-neon/20">
+            <div class="text-brand-neon font-bold text-xs uppercase">Día 31 al 60</div>
+            <h4 class="text-sm font-bold text-white">Escala & Retorno</h4>
+            <p class="text-xs text-slate-400">Optimización de anuncios ganadores, escalamiento del presupuesto publicitario y balance de comisiones en caja.</p>
+          </div>
+        </div>
+
+        <div class="pt-6 space-y-4">
+          <div class="inline-flex flex-col sm:flex-row items-center gap-4">
+            <button onclick="goToSlide(7)" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brand-primary to-brand-accent text-white font-bold text-sm glow-btn hover:opacity-95 transition cursor-pointer">
+              Elegir Plan y Comenzar <i data-lucide="check" class="inline w-4 h-4 ml-1"></i>
+            </button>
+            <button onclick="goToSlide(6)" class="px-6 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white font-bold text-sm border border-white/10 transition cursor-pointer">
+              Ver Muestras de Video <i data-lucide="film" class="inline w-4 h-4 ml-1"></i>
+            </button>
+          </div>
+          <p class="text-xs text-slate-400">
+            SIKAI Consulting • Maykol Sicard • Contacto directo para puesta en marcha
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cinema Modal View -->
+  <div id="cinemaModal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-2xl flex-col items-center justify-center p-4 sm:p-8 transition-opacity duration-300">
+    <div class="max-w-4xl w-full flex flex-col items-center space-y-4">
+      <div class="w-full flex items-center justify-between text-white border-b border-white/10 pb-3">
+        <div class="flex items-center gap-2">
+          <span id="cinemaTag" class="text-[10px] font-bold px-2.5 py-0.5 rounded bg-brand-accent/20 text-brand-accent uppercase border border-brand-accent/30">Muestra</span>
+          <h3 id="cinemaTitle" class="text-base sm:text-lg font-bold">Título del Video</h3>
+        </div>
+        <button onclick="closeCinema()" class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition cursor-pointer" title="Cerrar (Esc)">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="w-full max-h-[75vh] flex items-center justify-center bg-black/80 rounded-2xl overflow-hidden border border-brand-accent/30 shadow-2xl relative">
+        <video id="cinemaVideo" class="max-h-[72vh] w-auto max-w-full rounded-xl" controls autoplay playsinline>
+          <source src="" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+
+      <p id="cinemaDesc" class="text-xs text-slate-400 text-center max-w-xl">
+        Descripción del video...
+      </p>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Pill -->
+  <footer class="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 bg-brand-card/90 backdrop-blur-md px-4 py-2 rounded-full border border-brand-cardBorder shadow-2xl flex items-center space-x-2 text-xs">
+    <button onclick="prevSlide()" class="p-1 hover:text-brand-accent transition"><i data-lucide="chevron-left" class="w-4 h-4"></i></button>
+    <div class="flex items-center space-x-1.5 px-2" id="slideDots">
+      <!-- Dots populated by JS -->
+    </div>
+    <button onclick="nextSlide()" class="p-1 hover:text-brand-accent transition"><i data-lucide="chevron-right" class="w-4 h-4"></i></button>
+  </footer>
+
+  <script>
+    // Lucide Icons initialization
+    lucide.createIcons();
+
+    let currentSlide = 1;
+    const totalSlides = 9;
+
+    function pauseAllSlideVideos() {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(v => {
+        if (!v.paused) {
+          v.pause();
+        }
+      });
+    }
+
+    function updateUI() {
+      pauseAllSlideVideos();
+      document.querySelectorAll('.slide').forEach((slide, idx) => {
+        if (idx + 1 === currentSlide) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+      document.getElementById('currentSlideNum').textContent = currentSlide;
+      
+      // Update dots
+      const dotsContainer = document.getElementById('slideDots');
+      dotsContainer.innerHTML = '';
+      for (let i = 1; i <= totalSlides; i++) {
+        const dot = document.createElement('button');
+        dot.className = `w-2 h-2 rounded-full transition-all ${i === currentSlide ? 'bg-brand-accent w-5' : 'bg-white/20 hover:bg-white/40'}`;
+        dot.onclick = () => goToSlide(i);
+        dotsContainer.appendChild(dot);
+      }
+      window.scrollTo(0, 0);
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) {
+        currentSlide++;
+        updateUI();
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) {
+        currentSlide--;
+        updateUI();
+      }
+    }
+
+    function goToSlide(n) {
+      if (n >= 1 && n <= totalSlides) {
+        currentSlide = n;
+        updateUI();
+      }
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCinema();
+        return;
+      }
+      if (document.getElementById('cinemaModal').classList.contains('flex')) {
+        return; // Don't navigate slides while modal is open
+      }
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullScreen();
+      }
+    });
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => console.log(err));
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Cinema Modal Functions
+    function openCinema(src, title, desc, tag) {
+      pauseAllSlideVideos();
+      const modal = document.getElementById('cinemaModal');
+      const vid = document.getElementById('cinemaVideo');
+      document.getElementById('cinemaTitle').textContent = title;
+      document.getElementById('cinemaDesc').textContent = desc;
+      document.getElementById('cinemaTag').textContent = tag || 'MUESTRA';
+      
+      vid.src = src;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      vid.play().catch(e => console.log('Autoplay handled', e));
+    }
+
+    function closeCinema() {
+      const modal = document.getElementById('cinemaModal');
+      const vid = document.getElementById('cinemaVideo');
+      vid.pause();
+      vid.src = '';
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Mutual exclusion: when one video in Slide 6 plays, pause others
+    ['vid-spot', 'vid-reel', 'vid-master'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener('play', () => {
+          ['vid-spot', 'vid-reel', 'vid-master'].forEach(otherId => {
+            if (otherId !== id) {
+              const other = document.getElementById(otherId);
+              if (other && !other.paused) other.pause();
+            }
+          });
+        });
+      }
+    });
+
+    // ROI Calculator Function
+    function calculateROI() {
+      const printers = parseInt(document.getElementById('printerSlider').value);
+      document.getElementById('sliderValue').textContent = `${printers} unidades`;
+
+      const avgTicket = 3200000;
+      const grossRevenue = printers * avgTicket;
+      const grossMargin = grossRevenue * 0.25;
+
+      const baseFee = 1800000;
+      const commissionPerUnit = 120000;
+      const totalCommission = printers * commissionPerUnit;
+      const totalCost = baseFee + totalCommission;
+
+      const netProfit = grossMargin - totalCost;
+      const roas = (grossMargin / totalCost).toFixed(1);
+
+      document.getElementById('grossRevenue').textContent = formatCOP(grossRevenue);
+      document.getElementById('grossProfit').textContent = formatCOP(grossMargin);
+      document.getElementById('sikaiCost').textContent = formatCOP(totalCost);
+      document.getElementById('netProfit').textContent = `${netProfit >= 0 ? '+' : ''}${formatCOP(netProfit)}`;
+      document.getElementById('roasMultiple').textContent = `Retorno ${roas}x (${printers} máq.)`;
+    }
+
+    function formatCOP(amount) {
+      return '$' + Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+
+    // Initialize UI on load
+    updateUI();
+    calculateROI();
+  </script>
+</body>
+</html>
