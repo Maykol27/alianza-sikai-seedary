@@ -29,8 +29,8 @@ Presentación comercial interactiva y propuesta integral para la alianza de crec
 
 ## 💼 Modelos Comerciales
 
-1. **Opción A (Partnership por Resultados):** Base operativa de \$1.800.000 COP/mes + Comisión (\$120K Bambu Lab A1 Combo/P1S/X1, \$80K A1 Mini, 7% CCTV/ZKTeco).
-2. **Opción B (Crecimiento Acelerado - Recomendada):** Base operativa de \$2.800.000 COP/mes (incluye video insignia YouTube) + Comisión (\$100K A1 Combo/P1S/X1, \$60K A1 Mini, 5% CCTV/ZKTeco).
+1. **Opción A (Partnership por Resultados):** Base operativa de \$1.800.000 COP/mes • **12 Videos al mes** (6 @seedarycol + 6 @maykolsicard) + Pauta en Meta & TikTok Ads + Comisión (\$120K Bambu Lab A1 Combo/P1S/X1, \$80K A1 Mini, 7% CCTV/ZKTeco).
+2. **Opción B (Crecimiento Acelerado - Recomendada):** Base operativa de \$2.800.000 COP/mes • **20 Videos Cortos al mes** (12 @seedarycol + 8 @maykolsicard) + **1 Video Largo Insignia para YouTube** + Pruebas A/B creativas en Meta & TikTok + Comisión (\$100K A1 Combo/P1S/X1, \$60K A1 Mini, 5% CCTV/ZKTeco).
 3. **Opción C (Efectivo + Canje Flexible):** \$1.900.000 COP en efectivo + \$900.000 COP en insumos/filamentos a precio de importador.
 
 ---

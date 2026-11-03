@@ -96,7 +96,7 @@ Para que el contenido no dependa únicamente del algoritmo orgánico, se requier
   * **\$80.000 COP** por cada Bambu Lab A1 Mini vendida.
   * **7% sobre el valor neto** de combos de seguridad (cámaras CCTV / controles ZKTeco).
 * **Entregables:**
-  * 8 Videos de alto impacto al mes (4 para canales de Seedary + 4 en colaboración o canal de @maykolsicard).
+  * 12 Videos de alto impacto al mes (6 para canales de Seedary + 6 en colaboración o canal de @maykolsicard).
   * Montaje, optimización y seguimiento diario de campañas de Meta Ads y TikTok Ads.
 * **Presupuesto de Pauta Recomendado:** \$1.000.000 a \$1.500.000 COP/mes (pagados directamente por Seedary a Meta/TikTok).
 
@@ -112,7 +112,7 @@ Para que el contenido no dependa únicamente del algoritmo orgánico, se requier
   * **\$60.000 COP** por cada A1 Mini vendida.
   * **5% sobre el valor neto** de kits de seguridad y automatización.
 * **Entregables:**
-  * **14 Videos Cortos al mes** (8 para canales de Seedary + 6 en co-branding / cuenta de @maykolsicard).
+  * **20 Videos Cortos al mes** (12 para canales de Seedary + 8 en co-branding / cuenta de @maykolsicard).
   * **1 Video Largo Insignia para YouTube** (Review a fondo o Guía definitiva de compra).
   * Gestión integral de pauta en Meta & TikTok Ads (pruebas A/B de anuncios, copys, creativos y optimización de coste por lead).
 * **Presupuesto de Pauta Recomendado:** \$1.500.000 a \$2.500.000 COP/mes.
