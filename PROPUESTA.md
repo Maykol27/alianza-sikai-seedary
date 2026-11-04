@@ -82,7 +82,7 @@ Para que el contenido no dependa únicamente del algoritmo orgánico, se requier
 > 2. Videos y colaboraciones publicados en la cuenta de **Maykol Sicard** (`@maykolsicard`).
 > 3. Creativos en video utilizados en las campañas de pauta digital (**Meta Ads y TikTok Ads**).
 >  
-> *Razón comercial para los dueños:* La base operativa que cobra SIKAI ($1.8M o $2.8M) es intencionalmente reducida (cubre solo costos técnicos mínimos de rodaje y edición). La viabilidad de que SIKAI les produzca entre 8 y 16 videos mensuales con calidad de estudio cinematográfico radica en que **SIKAI es socio de facturación de todo el contenido que crea para Seedary**.
+> *Razón comercial para los dueños:* La base operativa que cobra SIKAI ($2.0M o $2.8M) es intencionalmente reducida (cubre solo costos técnicos mínimos de rodaje y edición). La viabilidad de que SIKAI les produzca entre 8 y 16 videos mensuales con calidad de estudio cinematográfico radica en que **SIKAI es socio de facturación de todo el contenido que crea para Seedary**.
 
 ---
 
@@ -90,7 +90,7 @@ Para que el contenido no dependa únicamente del algoritmo orgánico, se requier
 *Diseñada para que sientan cero riesgo y vean que tú solo ganas fuerte si ellos venden.*
 
 * **Base Operativa Fija (Cubre costos de producción y montaje de pauta):**  
-  **\$1.800.000 COP / mes**
+  **\$2.000.000 COP / mes**
 * **Comisión por Venta Atribuida al Ecosistema (Canales Seedary + Maykol + Ads):**
   * **\$120.000 COP** por cada impresora 3D (Bambu Lab A1 Combo, P1S, X1C) vendida mediante las campañas de video, enlaces rastreados a WhatsApp o el código promocional.
   * **\$80.000 COP** por cada Bambu Lab A1 Mini vendida.
